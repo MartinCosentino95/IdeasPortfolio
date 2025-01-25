@@ -1,0 +1,57 @@
+@import "/src/styles/variables";
+
+.mc-portfolio-header {
+    &-container-absolute {
+        position: absolute;
+    }
+
+    &-title {
+        font-size: 76px;
+        text-align: left;
+        font-weight: bolder;
+        font-family: "Montserrat";
+        color: #fff;
+
+        span {
+            text-shadow: 10px 8px 0px rgba(0, 0, 0, 5.33);
+            transition: 1s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: $primary-color;
+                
+            }
+        }
+
+        &-container {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            // background-color: aliceblue;
+            width: 100%;
+
+            .animated-title {
+                animation: move-right 10s linear infinite;
+            }
+        }
+    }
+
+    &-subtitle {
+        font-size: 36px;
+        text-align: left;
+        font-weight: bolder;
+        font-family: "Montserrat";
+        color: #fff;
+    }
+}
+
+@keyframes move-right {
+    from {
+        transform: translateX(100%); /* Comienza fuera del contenedor */
+    }
+    to {
+        transform: translateX(-100%); /* Termina fuera del contenedor del otro lado */
+    }
+}

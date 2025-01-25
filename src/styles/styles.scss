@@ -1,0 +1,35 @@
+@import "./_variables";
+@import url(/src/styles/components/_mc-portfolio-header.scss);
+
+html {
+  overflow-x: hidden !important;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.App {
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: $primary-color;
+}
+
+button {
+  background-color: $secondary-color;
+  color: $background-color;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: $primary-color;
+  color: $button-hover-color;
+}
