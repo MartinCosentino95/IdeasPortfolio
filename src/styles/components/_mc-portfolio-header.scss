@@ -11,6 +11,7 @@
         font-weight: bolder;
         font-family: "Montserrat";
         color: #fff;
+        opacity: 1;
 
         span {
             text-shadow: 10px 8px 0px rgba(0, 0, 0, 5.33);
@@ -19,7 +20,6 @@
 
             &:hover {
                 color: $primary-color;
-                
             }
         }
 
@@ -31,10 +31,6 @@
             white-space: nowrap;
             // background-color: aliceblue;
             width: 100%;
-
-            .animated-title {
-                animation: move-right 10s linear infinite;
-            }
         }
     }
 
@@ -47,11 +43,20 @@
     }
 }
 
-@keyframes move-right {
-    from {
-        transform: translateX(100%); /* Comienza fuera del contenedor */
-    }
-    to {
-        transform: translateX(-100%); /* Termina fuera del contenedor del otro lado */
-    }
+// Efecto estrellas
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
